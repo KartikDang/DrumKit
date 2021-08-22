@@ -66,16 +66,76 @@ function buttonAnimation(expression)
         }, 200);
 }
 
+var arr=[];
+var arr_final=[];
+var click=0;
+document.querySelector(".Record").addEventListener("click",function(e){
+
+        click++;
+        arr=[];
+        if(click==1){
+        document.addEventListener("keydown",function(e){
+                console.log(e.key);
+                if(e.key=="w"||e.key=="a"||e.key=="s"||e.key=="d"||e.key=="j"||e.key=="k"||e.key=="l"){
+                
+                        arr.push(e.key);      
+                } 
+        });
+}
+
+        document.querySelector(".cont").classList.remove("visible");
+
+ 
+
+        // if(click%2!=0){
+
+        //         document.querySelector(".Record").innerHTML="Stop Recording";
+        //         document.querySelector(".Record").classList.add("Stop");
+        //         document.querySelector(".Record").classList.remove("Record");
+
+        // }
+
+        // else{
+        //         document.querySelector(".Stop").innerHTML="Record Node";
+        //         document.querySelector(".Stop").classList.add("Record");
+        //         document.querySelector(".Stop").classList.remove("Stop");
+        // }  
+
+});
+
+
+var click_2=0;
+document.querySelector(".Stop").addEventListener("click",function(){
+        click++;
+
+                arr_final=arr;
+                arr=[];
+
+                document.querySelector(".cont").classList.remove("box");
+                document.querySelector(".record_text").innerHTML="Recorded Successfully. Play using Replay Button";
+})
 
 
 
+document.querySelector(".Replay").addEventListener("click",function(){
+        var i=0;
+        function myloop(){
 
+                setTimeout(function(){
+                        console.log(arr_final[i]);
+                        buttonAnimation(arr_final[i]);
+                        switch_audio(arr_final[i]);
+                        i++;
+                        if(i<arr_final.length){
+                                myloop();
+                        }
+                },200);
+        }
+        
+        myloop();
 
-
-
-
-
-
+        arr_final=arr_final;
+})
 
 
 

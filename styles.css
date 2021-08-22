@@ -79,3 +79,28 @@ footer {
   margin: 10px;
   background-color: white;
 }
+.box{
+  
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  animation: animate 
+  1.5s linear infinite;
+}
+
+.visible{
+  display: none;
+}
+
+@keyframes animate {
+  0% {
+      opacity: 0;
+  }
+
+  50% {
+      opacity: 0.7;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}

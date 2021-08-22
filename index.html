@@ -4,13 +4,26 @@
 <head>
   <meta charset="utf-8">
   <title>Drum Kit</title>
-  <link rel="stylesheet" href="styles.css">
+  
   <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <script
+      src="https://kit.fontawesome.com/ed2875010c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <br>
+  
 
-  <h1 id="title">Drum 🥁 Kit</h1>
+  <h1 id="title">Drum Node Recorder</h1>
   <div class="set">
     <button class="w drum">w</button>
     <button class="a drum">a</button>
@@ -21,8 +34,18 @@
     <button class="l drum">l</button>
   </div>
 
+  <div class="button">
+    <button type="button" class="btn btn-dark Record">Record Node</button>
+    <button type="button" class="btn btn-dark Stop">Stop Recording</button>
+    <button type="button" class="btn btn-dark Replay">Replay Node</button>
+  </div>
+  <br>
+  <div class="box visible cont">
+    <i class="fas fa-microphone fa-2x" style="display: inline; color: white;"><h4 style="color: white; display: inline; padding-left: 1.5%;" class="record_text">Recording Your Node</h4></i>
+    
+  </div>
   <script src="index.js"></script>
-  
+
 
 </body>
 
